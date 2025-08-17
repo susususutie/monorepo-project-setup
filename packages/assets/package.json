@@ -1,0 +1,11 @@
+{
+  "name": "assets",
+  "description": "零依赖的静态资源包，包含图片、字体等",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./images/*": "./src/images/*",
+    "./fonts/*": "./src/fonts/*"
+  }
+}

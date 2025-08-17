@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "app-admin/*": ["apps/app-admin/src/*"],
+      "app-dashboard/*": ["apps/app-dashboard/src/*"],
+      //
+      "shared": ["packages/shared/src/index.js"],
+      "shared/*": ["packages/shared/src/*"],
+      "components": ["packages/components/src/index.js"],
+      // "components/*": ["packages/components/src/*"],
+      "components/Cards": ["packages/components/src/Cards/index.js"],
+      "components/Dialogs": ["packages/components/src/Dialogs/index.js"],
+      "components/Forms": ["packages/components/src/Forms/index.js"],
+      //
+      "foundation": ["packages/foundation/src/index.js"],
+      "foundation/*": ["packages/foundation/src/*"],
+      "assets/*": ["packages/assets/src/*"],
+    }
+  },
+  "include": [
+    "apps/*/src",
+    "packages/*/src",
+    "apps/*/vite.config.js",
+    "packages/*/vite.config.js",
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules",
+    "apps/*/dist",
+    "apps/*/build",
+    "apps/*/node_modules",
+    "packages/*/dist",
+    "packages/*/build",
+    "packages/*/node_modules",
+  ]
+}

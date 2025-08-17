@@ -1,0 +1,30 @@
+{
+  "name": "monorepo-project-setup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter \"./apps/*\" -r --parallel run dev",
+    "build": "pnpm --filter \"./apps/*\" -r --parallel run build",
+    "preview": "pnpm --filter \"./apps/*\" -r --parallel run preview",
+    "lint": "eslint --config eslint.config.js",
+    "format": "prettier **/*.{js,jsx} --write"
+  },
+  "engines": {
+    "node": ">=22.5.1"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "eslint": "catalog:",
+    "eslint-import-resolver-typescript": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "globals": "catalog:",
+    "prettier": "catalog:"
+  },
+  "license": "ISC",
+  "keywords": [],
+  "author": "sutie"
+}

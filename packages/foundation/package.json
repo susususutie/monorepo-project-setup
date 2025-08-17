@@ -1,0 +1,13 @@
+{
+  "name": "foundation",
+  "description": "零依赖的基础工具包",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./configs/*": "./src/configs/*",
+    "./constants/*": "./src/constants/*",
+    "./ui/*": "./src/ui/*",
+    "./utils/*": "./src/utils/*"
+  }
+}

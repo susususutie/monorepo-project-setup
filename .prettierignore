@@ -1,0 +1,13 @@
+.ci
+.husky
+.vscode
+bash
+build*
+deploy
+node_modules
+public
+script
+.*
+*.conf
+pnpm-lock.yaml
+jsconfig.json
