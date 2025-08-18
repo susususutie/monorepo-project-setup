@@ -5,8 +5,10 @@
   "type": "module",
   "exports": {
     ".": "./src/index.js",
-    "./configs/*": "./src/configs/*",
+    "./buildtime-configs/*": "./src/buildtime-configs/*",
     "./constants/*": "./src/constants/*",
+    "./runtime-configs/*": "./src/runtime-configs/*",
+    "./ui": "./src/ui/index.js",
     "./ui/*": "./src/ui/*",
     "./utils/*": "./src/utils/*"
   }

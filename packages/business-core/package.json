@@ -1,13 +1,13 @@
 {
   "name": "business-core",
-  "description": "业务核心但几乎不改：API、业务组件、权限字典、全局枚举、公司级主题",
+  "description": "业务核心但几乎不改：API、业务组件、权限字典、业务枚举、业务相关工具函数。",
   "private": true,
   "type": "module",
   "exports": {
     ".": "./src/index.js",
-    "./configs/*": "./src/configs/*",
+    "./api/*": "./src/api/*",
+    "./components": "./src/components/index.js",
     "./constants/*": "./src/constants/*",
-    "./ui/*": "./src/ui/*",
-    "./utils/*": "./src/utils/*"
+    "./enums/*": "./src/enums/*"
   }
 }
