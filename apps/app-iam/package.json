@@ -1,0 +1,22 @@
+{
+  "name": "app-iam",
+  "private": true,
+  "version": "0.0.0",
+  "description": "用户&权限（IAM）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react-swc": "catalog:",
+    "vite": "catalog:"
+  }
+}

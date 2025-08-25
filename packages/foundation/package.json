@@ -9,7 +9,6 @@
     "./constants/*": "./src/constants/*",
     "./runtime-configs/*": "./src/runtime-configs/*",
     "./ui": "./src/ui/index.js",
-    "./ui/*": "./src/ui/*",
     "./utils/*": "./src/utils/*"
   }
 }

@@ -1,8 +1,7 @@
-
-import { API_BASE_URL, API_PREFIX } from "../constants/api.const";
+import { API_BASE_URL, API_PREFIX } from '../constants/api.const';
 
 export default {
-  get: async (url, params={}, options = {}) => {
+  get: async (url, params = {}, options = {}) => {
     const response = await fetch(`${API_BASE_URL}${API_PREFIX}${url}`, {
       method: 'GET',
       ...options,
@@ -19,7 +18,7 @@ export default {
 
     return response.json();
   },
-  post: async (url, data={},options = {}) => {
+  post: async (url, data = {}, options = {}) => {
     const response = await fetch(`${API_BASE_URL}${API_PREFIX}${url}`, {
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
@@ -35,6 +34,5 @@ export default {
     }
 
     return response.json();
-  }
-
-}
+  },
+};

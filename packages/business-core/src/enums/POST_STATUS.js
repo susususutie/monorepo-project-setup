@@ -3,4 +3,4 @@ export default {
   FINISHED: 'finished',
   PUBLISHED: 'published',
   DRAFT: 'draft',
-}
+};
