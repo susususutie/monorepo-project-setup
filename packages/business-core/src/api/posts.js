@@ -1,4 +1,4 @@
-import myFetch from './fetch';
+import myFetch from './fetch.js';
 import { API_ENDPOINTS } from '../constants/api.const.js';
 
 export function getPosts(params) {
