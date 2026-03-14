@@ -1,4 +1,4 @@
-import { API_BASE_URL, API_PREFIX } from '../constants/api.const';
+import { API_BASE_URL, API_PREFIX } from '../constants/api.const.js';
 
 export default {
   get: async (url, params = {}, options = {}) => {
@@ -22,6 +22,39 @@ export default {
     const response = await fetch(`${API_BASE_URL}${API_PREFIX}${url}`, {
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
+      ...options,
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
+  },
+  put: async (url, data = {}, options = {}) => {
+    const response = await fetch(`${API_BASE_URL}${API_PREFIX}${url}`, {
+      method: 'PUT',
+      body: data ? JSON.stringify(data) : undefined,
+      ...options,
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
+  },
+  delete: async (url, options = {}) => {
+    const response = await fetch(`${API_BASE_URL}${API_PREFIX}${url}`, {
+      method: 'DELETE',
       ...options,
       headers: {
         'Content-Type': 'application/json',
