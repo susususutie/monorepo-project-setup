@@ -1,5 +1,6 @@
 // business-core 主入口
-export * from './api/fetch.js';
+import fetchApi from './api/fetch.js';
+export { fetchApi as fetch };
 export * from './api/posts.js';
 export { PostButton } from './components/index.js';
 export * from './constants/api.const.js';
