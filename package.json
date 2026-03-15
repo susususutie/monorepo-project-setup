@@ -16,7 +16,7 @@
   "devDependencies": {
     "@eslint/js": "catalog:",
     "eslint": "catalog:",
-    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-import-resolver-typescript": "catalog:",
     "eslint-plugin-import-x": "catalog:",
     "eslint-plugin-react": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
