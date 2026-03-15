@@ -7,13 +7,18 @@
     "build": "pnpm --filter \"./apps/*\" -r --parallel run build",
     "preview": "pnpm --filter \"./apps/*\" -r --parallel run preview",
     "lint": "eslint --config eslint.config.js",
-    "format": "prettier **/*.{js,jsx} --write"
+    "format": "prettier **/*.{js,jsx} --write",
+    "prepare": "husky",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "engines": {
     "node": ">=22.5.1"
   },
   "packageManager": "pnpm@10.12.1",
   "devDependencies": {
+    "@changesets/cli": "^2.29.2",
     "@eslint/js": "catalog:",
     "eslint": "catalog:",
     "eslint-import-resolver-typescript": "catalog:",
@@ -22,7 +27,15 @@
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
     "globals": "catalog:",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "prettier": "catalog:"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "license": "ISC",
   "keywords": [],

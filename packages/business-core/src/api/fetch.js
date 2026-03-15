@@ -1,15 +1,30 @@
 import { API_BASE_URL, API_PREFIX } from '../constants/api.const.js';
 
+/**
+ * 构建带查询参数的 URL
+ * @param {string} url - 基础 URL
+ * @param {Object} params - 查询参数
+ * @returns {string} 完整的 URL
+ */
+const buildUrl = (url, params = {}) => {
+  const fullUrl = new URL(`${API_BASE_URL}${API_PREFIX}${url}`, window.location.origin);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null) {
+      fullUrl.searchParams.append(key, String(value));
+    }
+  });
+  return fullUrl.toString();
+};
+
 export default {
   get: async (url, params = {}, options = {}) => {
-    const response = await fetch(`${API_BASE_URL}${API_PREFIX}${url}`, {
+    const response = await fetch(buildUrl(url, params), {
       method: 'GET',
-      ...options,
-      body: params ? JSON.stringify(params) : undefined,
       headers: {
         'Content-Type': 'application/json',
         ...options.headers,
       },
+      ...options,
     });
 
     if (!response.ok) {
